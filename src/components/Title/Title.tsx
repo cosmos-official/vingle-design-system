@@ -1,4 +1,4 @@
-interface TitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
+export interface TitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
   is?: 't1' | 't2' | 'sub1' | 'sub2' | 'sub3';
 }
 

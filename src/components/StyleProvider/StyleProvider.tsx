@@ -4,7 +4,7 @@ import { type PropsWithChildren } from 'react';
 import theme from '../../styles/theme';
 import GlobalStyles from '../../styles/GlobalStyles';
 
-interface StyleProviderProps extends PropsWithChildren {}
+export interface StyleProviderProps extends PropsWithChildren {}
 
 const StyleProvider = ({ children }: StyleProviderProps) => {
   return (
