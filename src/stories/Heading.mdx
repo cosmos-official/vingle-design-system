@@ -1,0 +1,38 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as HeadingStories from './Heading.stories';
+
+<Meta of={HeadingStories} />
+
+# Heading
+
+콘텐츠의 제목을 나타냅니다.
+
+Heading Level은 1부터 3까지만 지원합니다. 각각의 숫자는 h1~h3 태그에 대응됩니다.
+
+## 디자인
+
+<Canvas of={HeadingStories.Heading1} />
+<Canvas of={HeadingStories.Heading2} />
+<Canvas of={HeadingStories.Heading3} />
+
+## props
+
+- `as?: 'h1' | 'h2' | 'h3'` : 나타낼 시맨틱 태그를 설정합니다. 각각은 태그로 대응됩니다. 기본값은 'h1'입니다.
+- `children: ReactNode` : Heading에 나타낼 내용을 설정합니다.
+
+> 이외 스타일은 자유롭게 설정가능하나, 권장하지는 않습니다.
+
+## 사용 예시
+
+```jsx
+// Basic Usage
+<Heading>빈티지 샵을 다 모았다! 빙글 Vingle</Heading> //
+<Heading as='h1'>빈티지 샵을 다 모았다! 빙글 Vingle</Heading>
+<Heading as='h2'>빈티지 샵을 다 모았다! 빙글 Vingle</Heading>
+<Heading as='h3'>빈티지 샵을 다 모았다! 빙글 Vingle</Heading>
+```
+
+## 주의사항
+
+vingle은 가급적 mdn에서 제공하는 [접근성 고려사항](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Heading_Elements#%EC%A0%91%EA%B7%BC%EC%84%B1_%EA%B3%A0%EB%A0%A4%EC%82%AC%ED%95%AD)을 따르고 있습니다.
