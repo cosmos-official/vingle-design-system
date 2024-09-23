@@ -41,23 +41,23 @@ const fontWeight = {
 const font = {
   head1: css`
     font: ${fontWeight.semibold} 24px/120% 'Pretendard Variable';
-    letter-spacing: -1px;
+    letter-spacing: -0.2px;
   `,
   head2: css`
     font: ${fontWeight.bold} 20px/120% 'Pretendard Variable';
-    letter-spacing: -1px;
+    letter-spacing: -0.2px;
   `,
   head3: css`
     font: ${fontWeight.semibold} 20px/120% 'Pretendard Variable';
-    letter-spacing: -1px;
+    letter-spacing: -0.2px;
   `,
   title1: css`
     font: ${fontWeight.semibold} 18px/150% 'Pretendard Variable';
-    letter-spacing: -1px;
+    letter-spacing: -0.2px;
   `,
   title2: css`
     font: ${fontWeight.medium} 18px/150% 'Pretendard Variable';
-    letter-spacing: -1px;
+    letter-spacing: -0.2px;
   `,
   subtitle1: css`
     font: ${fontWeight.bold} 18px/150% 'Pretendard Variable';
