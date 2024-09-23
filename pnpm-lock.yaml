@@ -67,6 +67,9 @@ devDependencies:
   '@vitejs/plugin-react':
     specifier: ^4.3.1
     version: 4.3.1(vite@5.4.7)
+  chromatic:
+    specifier: ^11.10.2
+    version: 11.10.2
   eslint:
     specifier: ^9.9.0
     version: 9.11.0
