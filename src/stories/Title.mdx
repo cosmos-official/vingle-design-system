@@ -1,0 +1,38 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as TitleStories from './Title.stories';
+
+<Meta of={TitleStories} />
+
+# Title
+
+Heading 컴포넌트 보다 더 작은 의미의 헤딩입니다.
+
+Heading Level은 4부터 5까지만 지원합니다.
+
+Title은 총 2개가 존재하는데, 각각 h4, h5의 시맨틱을 가집니다.
+
+## 디자인
+
+<Canvas of={TitleStories.Title1} />
+<Canvas of={TitleStories.Title2} />
+
+## props
+
+- `is?: 't1' | 't2'` : 나타낼 Title 컴포넌트를 설정합니다. 각각은 순서대로 h4, h5를 대응됩니다. 기본값은 't1'입니다.
+- `children: ReactNode` : Title에 나타낼 내용을 설정합니다.
+
+> 이외 스타일은 자유롭게 설정가능하나, 권장하지는 않습니다.
+
+## 사용 예시
+
+```jsx
+// Basic Usage
+<Title>빈티지 샵을 다 모았다! 빙글 Vingle</Title>
+<Title is='t1'>빈티지 샵을 다 모았다! 빙글 Vingle</Title>
+<Title is='t2'>빈티지 샵을 다 모았다! 빙글 Vingle</Title>
+```
+
+## 주의사항
+
+vingle은 가급적 mdn에서 제공하는 [접근성 고려사항](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Heading_Elements#%EC%A0%91%EA%B7%BC%EC%84%B1_%EA%B3%A0%EB%A0%A4%EC%82%AC%ED%95%AD)을 따르고 있습니다.
