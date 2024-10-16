@@ -1,0 +1,32 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as CaptionStories from './Caption.stories';
+
+<Meta of={CaptionStories} />
+
+# Caption
+
+Caption 컴포넌트는 이미지나 테이블 등의 컨텐츠에 대한 설명을 제공합니다.
+
+> ⚠️ Caption 컴포넌트는 위계에 상관없이 모두 동일한 p 태그로 지원합니다.
+
+## 디자인
+
+<Canvas of={CaptionStories.Caption1} />
+<Canvas of={CaptionStories.Caption2} />
+
+## props
+
+- `is?: 'c1' | 'c2'` : 나타낼 Caption 컴포넌트의 표준 스타일을 설정합니다.
+- `children: ReactNode` : Caption에 나타낼 내용을 설정합니다.
+
+> 이외 스타일은 자유롭게 설정가능하나, 권장하지는 않습니다.
+
+## 사용 예시
+
+```jsx
+// Basic Usage
+<Caption>빈티지 샵을 다 모았다! 빙글 Vingle</Caption>
+<Caption is='c1'>빈티지 샵을 다 모았다! 빙글 Vingle</Caption>
+<Caption is='c2'>빈티지 샵을 다 모았다! 빙글 Vingle</Caption>
+```

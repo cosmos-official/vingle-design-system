@@ -1,0 +1,40 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as SubTitleStories from './SubTitle.stories';
+
+<Meta of={SubTitleStories} />
+
+# Heading
+
+Title 컴포넌트에 부수적으로 사용하는 컴포넌트입니다.
+
+> ⚠️ SubTitle 컴포넌트는 위계에 상관없이 모두 동일한 h6 태그로 지원합니다.
+
+## 디자인
+
+<Canvas of={SubTitleStories.SubTitle1} />
+<Canvas of={SubTitleStories.SubTitle2} />
+<Canvas of={SubTitleStories.SubTitle3} />
+
+## props
+
+- `is?: 'sub1' | 'sub2' | 'sub3'` : subtitle에 사이즈를 결정합니다. Title, Heading과는 다르게 사이즈가 다름을 유의하세요.
+- `children: ReactNode` : children에 나타낼 내용을 설정합니다.
+
+> 이외 스타일은 자유롭게 설정가능하나, 권장하지는 않습니다.
+
+## 사용 예시
+
+```jsx
+// Basic Usage
+<SubTitle>빈티지 샵을 다 모았다! 빙글 Vingle</SubTitle>
+<SubTitle is='sub1'>빈티지 샵을 다 모았다! 빙글 Vingle</SubTitle>
+<SubTitle is='sub2'>빈티지 샵을 다 모았다! 빙글 Vingle</SubTitle>
+<SubTitle is='sub3'>빈티지 샵을 다 모았다! 빙글 Vingle</SubTitle>
+```
+
+## 주의사항 & QnA
+
+- vingle은 가급적 mdn에서 제공하는 [접근성 고려사항](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Heading_Elements#%EC%A0%91%EA%B7%BC%EC%84%B1_%EA%B3%A0%EB%A0%A4%EC%82%AC%ED%95%AD)을 따르고 있습니다.
+- Q. 왜 다른 위계인데 동일한 h6을 사용하나요?
+  - 사용하는 부분에서의 스타일 크기가 다를 수도 있기 때문입니다. 예시로, sub1과 sub2 같은 경우 한 Title아래에서 함께 사용될 수는 없지만 다른 컴포넌트에서 사용할 수 있습니다.
