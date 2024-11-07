@@ -22,12 +22,14 @@ const colors = {
     400: '#b9b7c4',
     300: '#cecdd6',
     100: '#f4f3f6',
+    200: '#e6e6ea',
     50: '#f9f9fa',
   },
   black: '#000000',
   white: '#ffffff',
   status: {
     error: '#ff2424',
+    like: 'ff2875',
   },
 } as const;
 
