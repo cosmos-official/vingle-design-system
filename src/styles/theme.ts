@@ -44,54 +44,80 @@ const font = {
   head1: css`
     font: ${fontWeight.semibold} 24px/120% 'Pretendard Variable';
     letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
   `,
   head2: css`
     font: ${fontWeight.bold} 20px/120% 'Pretendard Variable';
     letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
   `,
   head3: css`
     font: ${fontWeight.semibold} 20px/120% 'Pretendard Variable';
     letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
   `,
   title1: css`
     font: ${fontWeight.semibold} 18px/150% 'Pretendard Variable';
     letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
   `,
   title2: css`
     font: ${fontWeight.medium} 18px/150% 'Pretendard Variable';
     letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
   `,
   subtitle1: css`
     font: ${fontWeight.bold} 18px/150% 'Pretendard Variable';
     letter-spacing: 0;
+    margin: 0;
+    padding: 0;
   `,
   subtitle2: css`
     font: ${fontWeight.semibold} 16px/150% 'Pretendard Variable';
     letter-spacing: 0;
+    margin: 0;
+    padding: 0;
   `,
   subtitle3: css`
     font: ${fontWeight.medium} 16px/150% 'Pretendard Variable';
     letter-spacing: 0;
+    margin: 0;
+    padding: 0;
   `,
   body1: css`
     font: ${fontWeight.semibold} 14px/150% 'Pretendard Variable';
     letter-spacing: 0;
+    margin: 0;
+    padding: 0;
   `,
   body2: css`
     font: ${fontWeight.medium} 14px/150% 'Pretendard Variable';
     letter-spacing: 0;
+    margin: 0;
+    padding: 0;
   `,
   body3: css`
     font: ${fontWeight.regular} 14px/150% 'Pretendard Variable';
     letter-spacing: 0;
+    margin: 0;
+    padding: 0;
   `,
   caption1: css`
     font: ${fontWeight.medium} 12px/150% 'Pretendard Variable';
     letter-spacing: 0;
+    margin: 0;
+    padding: 0;
   `,
   caption2: css`
     font: ${fontWeight.medium} 10px/150% 'Pretendard Variable';
     letter-spacing: 0;
+    margin: 0;
+    padding: 0;
   `,
 } as const;
 
