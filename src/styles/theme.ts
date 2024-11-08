@@ -7,8 +7,8 @@ const colors = {
   },
   secondary: {
     purple: {
-      70: '#d650ff',
-      50: '#edB0ff',
+      70: '#e07bff',
+      50: '#edb0ff',
       30: '#f5d3ff',
       10: '#f9e7ff',
     },
@@ -21,8 +21,8 @@ const colors = {
     500: '#9f9eaf',
     400: '#b9b7c4',
     300: '#cecdd6',
-    100: '#f4f3f6',
     200: '#e6e6ea',
+    100: '#f4f3f6',
     50: '#f9f9fa',
   },
   black: '#000000',
@@ -31,6 +31,29 @@ const colors = {
     error: '#ff2424',
     like: 'ff2875',
   },
+} as const;
+
+export const colorAlias = {
+  vBlack: colors.primary.vingleBlack,
+  vPurple: colors.primary.vinglePurple,
+  p70: colors.secondary.purple[70],
+  p50: colors.secondary.purple[50],
+  p30: colors.secondary.purple[30],
+  p10: colors.secondary.purple[10],
+  g900: colors.gray[900],
+  g800: colors.gray[800],
+  g700: colors.gray[700],
+  g600: colors.gray[600],
+  g500: colors.gray[500],
+  g400: colors.gray[400],
+  g300: colors.gray[300],
+  g200: colors.gray[200],
+  g100: colors.gray[100],
+  g50: colors.gray[50],
+  black: colors.black,
+  white: colors.white,
+  error: colors.status.error,
+  like: colors.status.like,
 } as const;
 
 const fontWeight = {
