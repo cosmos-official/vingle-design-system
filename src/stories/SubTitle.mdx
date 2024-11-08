@@ -18,8 +18,9 @@ Title 컴포넌트에 부수적으로 사용하는 컴포넌트입니다.
 
 ## props
 
-- `is?: 'sub1' | 'sub2' | 'sub3'` : subtitle에 사이즈를 결정합니다. Title, Heading과는 다르게 사이즈가 다름을 유의하세요.
+- `is?: 'sub1' | 'sub2' | 'sub3'` : SubTitle에 사이즈를 결정합니다. Title, Heading과는 다르게 사이즈가 다름을 유의하세요.
 - `children: ReactNode` : children에 나타낼 내용을 설정합니다.
+- `color: keyof typeof colorAlias`: SubTitle의 색상을 설정합니다. 기본값은 'black'입니다. color는 현재 색상의 별칭을 통해 설정됩니다. 별칭은 색상 문서를 참고하세요.
 
 > 이외 스타일은 자유롭게 설정가능하나, 권장하지는 않습니다.
 
