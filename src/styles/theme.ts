@@ -29,7 +29,7 @@ const colors = {
   white: '#ffffff',
   status: {
     error: '#ff2424',
-    like: 'ff2875',
+    like: '#ff2875',
   },
 } as const;
 
