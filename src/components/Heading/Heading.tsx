@@ -1,6 +1,7 @@
 import { css, useTheme } from '@emotion/react';
 import { colorAlias } from '../../styles/theme';
 import { useCallback } from 'react';
+import { conditionalStyle } from '../../util/style';
 
 export interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
   as?: 'h1' | 'h2' | 'h3';
@@ -10,7 +11,7 @@ export interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
 const Heading = ({
   children,
   as: Component = 'h1',
-  color = 'black',
+  color,
   ...props
 }: HeadingProps) => {
   const theme = useTheme();
@@ -31,7 +32,10 @@ const Heading = ({
     <Component
       css={css`
         ${getHeadingStyle()}
-        color: ${colorAlias[color]};
+        ${conditionalStyle(
+          color,
+          `color: ${colorAlias[color as keyof typeof colorAlias]};`
+        )}
       `}
       {...props}
     >

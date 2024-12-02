@@ -1,6 +1,7 @@
 import { css, useTheme } from '@emotion/react';
 import { colorAlias } from '../../styles/theme';
 import { useCallback } from 'react';
+import { conditionalStyle } from '../../util/style';
 
 export interface TextProps
   extends React.HTMLAttributes<
@@ -15,7 +16,7 @@ const Text = ({
   children,
   as: Component = 'p',
   is = 'b1',
-  color = 'black',
+  color,
   ...props
 }: TextProps) => {
   const theme = useTheme();
@@ -33,7 +34,10 @@ const Text = ({
     <Component
       css={css`
         ${getTextStyle()}
-        color: ${colorAlias[color]};
+        ${conditionalStyle(
+          color,
+          `color: ${colorAlias[color as keyof typeof colorAlias]};`
+        )};
       `}
       {...props}
     >

@@ -1,6 +1,7 @@
 import { css, useTheme } from '@emotion/react';
 import { useCallback } from 'react';
 import { colorAlias } from '../../styles/theme';
+import { conditionalStyle } from '../../util/style';
 
 export interface CaptionProps
   extends React.HTMLAttributes<HTMLParagraphElement> {
@@ -8,12 +9,7 @@ export interface CaptionProps
   color?: keyof typeof colorAlias;
 }
 
-const Caption = ({
-  children,
-  is = 'c1',
-  color = 'black',
-  ...props
-}: CaptionProps) => {
+const Caption = ({ children, is = 'c1', color, ...props }: CaptionProps) => {
   const theme = useTheme();
 
   const getCaptionStyle = useCallback(() => {
@@ -28,7 +24,10 @@ const Caption = ({
     <p
       css={css`
         ${getCaptionStyle()}
-        color: ${colorAlias[color]};
+        ${conditionalStyle(
+          color,
+          `color: ${colorAlias[color as keyof typeof colorAlias]};`
+        )}
       `}
       {...props}
     >

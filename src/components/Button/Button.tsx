@@ -17,7 +17,7 @@ export interface ButtonProps
   paddingHorizontal?: string;
 }
 
-const conditinalStyle = (condition: string | undefined, style: string) =>
+const conditionalStyle = (condition: string | undefined, style: string) =>
   condition ? style : '';
 
 const Button = ({
@@ -120,19 +120,19 @@ const Button = ({
         }
         ${getButtonBasicStyle()}
         ${getButtonSizeStyle()}
-        ${conditinalStyle(borderRadius, `border-radius: ${borderRadius};`)};
-        ${conditinalStyle(
+        ${conditionalStyle(borderRadius, `border-radius: ${borderRadius};`)};
+        ${conditionalStyle(
           backgroundColor,
           `background-color: ${backgroundColor};`
         )};
-        ${conditinalStyle(color, `color: ${color};`)};
-        ${conditinalStyle(borderColor, `border: 1px solid ${borderColor};`)};
-        ${conditinalStyle(width, `width: ${width};`)};
-        ${conditinalStyle(
+        ${conditionalStyle(color, `color: ${color};`)};
+        ${conditionalStyle(borderColor, `border: 1px solid ${borderColor};`)};
+        ${conditionalStyle(width, `width: ${width};`)};
+        ${conditionalStyle(
           paddingVertical,
           `padding-top: ${paddingVertical}; padding-bottom: ${paddingVertical}`
         )}
-        ${conditinalStyle(
+        ${conditionalStyle(
           paddingHorizontal,
           `padding-left: ${paddingHorizontal}; padding-right: ${paddingHorizontal}`
         )}

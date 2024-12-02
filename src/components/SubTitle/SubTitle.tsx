@@ -1,6 +1,7 @@
 import { css, useTheme } from '@emotion/react';
 import { colorAlias } from '../../styles/theme';
 import { useCallback } from 'react';
+import { conditionalStyle } from '../../util/style';
 
 export interface SubTitleProps extends React.HTMLAttributes<HTMLDivElement> {
   is?: 'sub1' | 'sub2' | 'sub3';
@@ -10,7 +11,7 @@ export interface SubTitleProps extends React.HTMLAttributes<HTMLDivElement> {
 const SubTitle = ({
   children,
   is = 'sub1',
-  color = 'black',
+  color,
   ...props
 }: SubTitleProps) => {
   const theme = useTheme();
@@ -29,7 +30,10 @@ const SubTitle = ({
     <h6
       css={css`
         ${getSubTitleStyle()}
-        color: ${colorAlias[color]};
+        ${conditionalStyle(
+          color,
+          `color: ${colorAlias[color as keyof typeof colorAlias]};`
+        )}
       `}
       {...props}
     >
