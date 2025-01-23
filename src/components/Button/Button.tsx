@@ -1,6 +1,7 @@
 import { useCallback } from 'react';
 import theme from '../../styles/theme';
 import { css } from '@emotion/react';
+import { conditionalStyle } from '../../util/style';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -16,9 +17,6 @@ export interface ButtonProps
   paddingVertical?: string;
   paddingHorizontal?: string;
 }
-
-const conditionalStyle = (condition: string | undefined, style: string) =>
-  condition ? style : '';
 
 const Button = ({
   onClick,
@@ -130,11 +128,11 @@ const Button = ({
         ${conditionalStyle(width, `width: ${width};`)};
         ${conditionalStyle(
           paddingVertical,
-          `padding-top: ${paddingVertical}; padding-bottom: ${paddingVertical}`
+          `padding-top: ${paddingVertical}; padding-bottom: ${paddingVertical};`
         )}
         ${conditionalStyle(
           paddingHorizontal,
-          `padding-left: ${paddingHorizontal}; padding-right: ${paddingHorizontal}`
+          `padding-left: ${paddingHorizontal}; padding-right: ${paddingHorizontal};`
         )}
       `}
       {...props}
