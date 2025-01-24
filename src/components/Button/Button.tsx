@@ -130,12 +130,12 @@ const Button = ({
         ${conditionalStyle(width, `width: ${width};`)};
         ${conditionalStyle(
           paddingVertical,
-          `padding-top: ${paddingVertical}; padding-bottom: ${paddingVertical}`
-        )}
+          `padding-top: ${paddingVertical}; padding-bottom: ${paddingVertical};`
+        )};
         ${conditionalStyle(
           paddingHorizontal,
-          `padding-left: ${paddingHorizontal}; padding-right: ${paddingHorizontal}`
-        )}
+          `padding-left: ${paddingHorizontal}; padding-right: ${paddingHorizontal};`
+        )};
       `}
       {...props}
     >
